@@ -45,3 +45,15 @@
 
 **项目部署**
 https://blog.csdn.net/jinwu18/article/details/106343588
+
+## allure生成报告的几条命令
+```shell
+1.生成测试报告数据
+pytest --alluredir=./allure-xml
+
+2.测试报告在线预览
+allure serve ./allure-xml
+
+3.测试报告本地静态数据生成
+allure generate ./allure-xml -o ./allure-result
+```

@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="084325d8-a820-46a9-85c2-f42b640346fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test.iml" afterDir="false" />
+    <list default="true" id="084325d8-a820-46a9-85c2-f42b640346fa" name="Default Changelist" comment="自用修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/app/appcommon.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/app/appcommon.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/base/selenium_init.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/base/selenium_init.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/test_demo_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/test_demo_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/test_demo_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/test_demo_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/test_demo_web.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/test_demo_web.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +262,16 @@
       <option name="presentableId" value="Default" />
       <updated>1588585535209</updated>
       <workItem from="1647421441768" duration="11443000" />
+      <workItem from="1647437383763" duration="395000" />
     </task>
+    <task id="LOCAL-00001" summary="自用修改">
+      <created>1647437485912</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1647437485912</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -301,8 +304,23 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="自用修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="自用修改" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/web_app_h5_api_pyTestAutomation$pytest_for_test_demo_api_TestApiDemo_test_api_demo.coverage" NAME="pytest for test_demo_api.TestApiDemo.test_api_demo Coverage Results" MODIFIED="1647435488684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
