@@ -16,7 +16,15 @@ class TestAppDemo:
 
     @pytest.fixture(scope='function')
     def setup(self):
-        self.appInit = appium_init.AppiumInit('7.1.1', 'android', '192.168.174.101:5555', 'com.android.contacts',
+        #
+        # 使用模拟器docker android:https://github.com/budtmo/docker-android
+        # docker run --privileged -d -p 6080:6080 -p 4723:4723 -p 5554:5554 -p 5555:5555
+        #   -v sample_apk:/root/tmp
+        #   -e DEVICE="Samsung Galaxy S6" -e APPIUM=true -e CONNECT_TO_GRID=true
+        #   -e APPIUM_HOST="127.0.0.1" -e APPIUM_PORT=4723 -e SELENIUM_HOST="172.17.0.1"
+        #   -e SELENIUM_PORT=4444 -e MOBILE_WEB_TEST=true -e RELAXED_SECURITY=true
+        #   --name android-container01 budtmo/docker-android-x86-8.1
+        self.appInit = appium_init.AppiumInit('8', 'android', '127.0.0.1:5555', 'com.android.contacts',
                                         'com.android.contacts.activities.PeopleActivity', '4723')
         self.driver = self.appInit.setup()
         self.app = AppCommon(self.driver)
@@ -31,10 +39,11 @@ class TestAppDemo:
         # self.appium.ele_click_by_id('com.android.contacts:id/left_button')
         time.sleep(2)
         edit_boxes = self.appium.ele_list_get_by_class_name("android.widget.EditText")
-        self.appium.ele_send_keys(edit_boxes[0], self.util.name_get())
-        self.appium.ele_send_keys(edit_boxes[1], self.util.phone_get())
-        self.appium.ele_click_by_id('menu_save')
-        result = self.app.toast_chk('联系人已保存')
+        random_name = self.util.name_get()
+        self.appium.ele_send_keys(edit_boxes[0], random_name)
+        self.appium.ele_send_keys(edit_boxes[2], self.util.phone_get())
+        self.appium.ele_click_by_id('com.android.contacts:id/editor_menu_save_button')
+        result = self.app.toast_chk('//*[@text=\'{}\']'.format(random_name))
         assert result
 
     def teardown(self):

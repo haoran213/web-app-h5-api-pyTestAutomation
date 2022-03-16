@@ -1,0 +1,4 @@
+[32mINFO    [0m root:selenium_action.py:179 文本框传值'尤田'
+[32mINFO    [0m root:selenium_action.py:179 文本框传值'18665218976'
+[32mINFO    [0m root:selenium_action.py:103 点击'保存'
+[32mINFO    [0m root:appcommon.py:20 找到了xpath为"//*[@text='尤田']"的toast

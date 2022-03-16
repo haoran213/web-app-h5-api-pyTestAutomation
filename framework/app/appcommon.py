@@ -16,11 +16,11 @@ class AppCommon:
 
     def toast_chk(self, toast):
         try:
-            WebDriverWait(self.driver, 5).until(lambda x: x.find_element_by_xpath('找到了toast"' + toast + '"'))
-            logger.info('找到了toast"' + toast + '"')
+            WebDriverWait(self.driver, 5).until(lambda x: x.find_element_by_xpath(toast))
+            logger.info('找到了xpath为"' + toast + '"的toast')
             return True
         except:
-            logger.info('找不到"' + toast + '"')
+            logger.info('找不到xpath为"' + toast + '"的toast')
             return False
 
     def device_x_get(self):

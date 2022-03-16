@@ -7,7 +7,7 @@ import sys, os
 
 
 class SeleniumInit:
-    driver_path = 'C:/Users/Administrator/PycharmProjects/pyTestAutomation/framework/driver/chromedriver.exe'
+    driver_path = 'C:/Users/howth/miniconda3/envs/autotest/chromedriver.exe'
 
     def setup(self, browser_type='web'):
         if browser_type == 'web':

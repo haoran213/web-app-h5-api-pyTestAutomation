@@ -22,17 +22,17 @@ class TestApiDemo:
     @pytest.mark.api
     @allure.story('test_story_of_api_demo')
     def test_api_demo(self, setup):
-        self.webAct.to_url("http://www.baidu.com")  # 打开百度网页（无头模式）
-        self.webAct.ele_send_keys(self.webAct.ele_get_by_id('kw'), 'selenium')  # 搜索框输入'selenium'
-        self.webAct.ele_click_by_id('su')  # 百度一下
+        self.webAct.to_url("https://cn.bing.com/")  # 打开必应网页（无头模式）
+        self.webAct.ele_send_keys(self.webAct.ele_get_by_id('sb_form_q'), 'selenium')  # 搜索框输入'selenium'
+        self.webAct.ele_click_by_id('search_icon')  # 搜索
         time.sleep(3)
         bs = BeautifulSoup(self.driver.page_source, 'html.parser')
         result = False
-        for item in bs.select("div[class = 'result c-container']"):
-            if 'selenium' in str(item.h3.a.get_text()).lower():
+        for item in bs.select("*[id='b_results']"):
+            if 'selenium' in str(item.get_text()).lower():
                 result = True
             else:
-                print(str(item.h3.a.get_text()).lower() + '：不包含selenium')
+                print(str(item.get_text()).lower() + '：不包含selenium')
                 result = False
         assert result
 

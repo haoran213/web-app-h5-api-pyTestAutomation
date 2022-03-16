@@ -21,11 +21,12 @@ class TestDemo:
     @pytest.mark.web
     @allure.story('test_story_of_web_demo')
     def test_web_demo(self, setup):
-        self.webAct.to_url("http://www.baidu.com")
-        self.webAct.ele_send_keys(self.webAct.ele_get_by_id('kw'), 'selenium') # 传入搜索关键字
-        self.webAct.ele_click_by_id('su')  # 点击百度一下按钮
+        self.webAct.to_url("https://cn.bing.com/")
+        self.webAct.ele_send_keys(self.webAct.ele_get_by_id('sb_form_q'), 'selenium') # 传入搜索关键字
+        self.webAct.ele_click_by_id('search_icon')  # 点击搜索按钮
         time.sleep(3)
-        result_list = self.webAct.ele_list_get_by_xpath("//div[@class='result c-container ']/h3/a")
+        result_list = self.webAct.ele_list_get_by_xpath("//*[@id='b_results']")
+        # print(str(result_list[0].text).lower())
         result = False
         for i in range(len(result_list)):
             if 'selenium' in str(result_list[i].text).lower():
